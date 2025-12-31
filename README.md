@@ -43,7 +43,7 @@ The project benchmarks 20 clinically significant variants using two orthogonal m
 
 The study revealed a distinct mechanistic separation of mutations, visualized in the correlation plot below.
 
-![Correlation Plot](final_correlation.png)
+![Correlation Plot](Plot/final_correlation.png)
 
 ### The "Three-Class" Classification System
 1.  **Type I: Electrostatic Disruptors (Top-Left)**
