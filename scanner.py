@@ -4,7 +4,7 @@ import os
 import forcefield
 import pandas as pd
 
-# --- LOAD C LIBRARY ---
+# Load C Engine
 lib_path = os.path.join(os.getcwd(), 'project/libengine.so')
 lib = ctypes.CDLL(lib_path)
 
@@ -86,7 +86,7 @@ def main():
     
     results = np.zeros(3, dtype=np.float64)
     
-    # CALLING C-ENGINE
+    # Calling the C engine function
     print("Running Physics Engine...")
     lib.calculate_interface_energy(nA, cA, qA, sA, eA, nB, cB, qB, sB, eB, results)
     
