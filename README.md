@@ -26,7 +26,7 @@ A mutation like **R248Q** (Arg $\to$ Gln) is a classic "Contact Mutation." It re
 
 ## ⚙️ Methodology: How the Engine Works
 
-### 1. The Custom C-Engine (`energy_kernels.c`)
+### 1. The Custom C-Engine (`engine.c`)
 I developed a rigid-body physics engine in **C** to calculate the non-bonded interaction energy between p53 and DNA. It uses an $O(N^2)$ pairwise potential summation:
 * **Electrostatics:** Coulomb’s Law ($q_i q_j / r_{ij}$) to measure charge-charge attraction.
 * **Sterics:** Lennard-Jones Potential to measure shape complementarity.
@@ -34,7 +34,7 @@ I developed a rigid-body physics engine in **C** to calculate the non-bonded int
 
 ### 2. The Hybrid Pipeline
 The project benchmarks 20 clinically significant variants using two orthogonal metrics:
-* **Binding Score:** Calculated by my C-engine (modifying charge/radius parameters in silico).
+* **Binding Score:** Calculated by my C-engine (modifying charge parameters in silico).
 * **Stability Score:** Calculated by FoldX 5.1 (repairing and mutating PDB structure).
 
 ---
