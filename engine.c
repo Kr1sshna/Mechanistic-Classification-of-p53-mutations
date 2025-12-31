@@ -35,23 +35,9 @@ double lennard_jones(double r2, double sigma, double epsilon) {
     return 4.0 * epsilon * ((s12 / r12) - (s6 / r6));
 }
 
-/**
- * coulomb - Calculates electrostatic interaction energy
- * 
- * Coulomb's law describes the energy between two charged particles.
- * The energy is proportional to the product of charges and inversely
- * proportional to the distance and dielectric constant of the medium.
- * 
- * Formula: V_Coulomb = K_C * q1 * q2 / (ε * r)
- * 
- * Parameters:
- *   r   - Distance between charges (Å)
- *   q1  - Charge of first particle (elementary charge units)
- *   q2  - Charge of second particle (elementary charge units)
- * 
- * Returns:
- *   Electrostatic energy in kcal/mol
- */
+
+//coulomb - Calculates electrostatic interaction energy
+ 
 double coulomb(double r, double q1, double q2) {
     // Energy = K_COULOMB * q1 * q2 / (DIELECTRIC * r)
     return (K_COULOMB * q1 * q2) / (DIELECTRIC * r);
@@ -61,12 +47,9 @@ double coulomb(double r, double q1, double q2) {
  * calculate_interface_energy - Computes total interaction energy between two molecules
  * 
  * This function performs a pairwise calculation between all atoms in molecule A
- * and all atoms in molecule B. For each atom pair:
- *   1. Computes the distance between them
- *   2. Applies mixing rules to determine interaction parameters
- *   3. Calculates VDW and electrostatic contributions
- * 
- * Parameters:
+ * and all atoms in molecule B. For each atom pair
+ 
+ * Arguments:
  *   n_A & n_B             - Number of atoms in molecule A and molecule B
  *   coords_A & coords_B   - 1D array of x,y,z coordinates for molecule A and molecule B
  *   charges_A & charges_B - Partial charges for each atom in molecule A and molecule B
