@@ -57,7 +57,7 @@ def main():
         arrowprops=dict(arrowstyle="-", color="gray", lw=0.5)
     )
 
-    plt.title("Correlation Graph", fontsize=16)   #title,x-axis label and 
+    plt.title("Correlation Graph", fontsize=16)   #title,x-axis label and y-axis label of the plot
     plt.xlabel("FoldX Predicted $\Delta\Delta G$ (kcal/mol)", fontsize=14)
     plt.ylabel("Calculated Electrostatic Destabilization $\Delta\Delta E$ (kcal/mol)", fontsize=14)
     
@@ -66,7 +66,7 @@ def main():
     plt.axvline(0, color='gray', linestyle='--')
     plt.grid(True, alpha=0.3)
     
-    plt.savefig("final_correlation.png")
+    plt.savefig("final_correlation.png") #saves the plot
     plt.show()
 
 if __name__ == "__main__":
