@@ -49,7 +49,7 @@ The study revealed a distinct mechanistic separation of mutations, visualized in
 1.  **Type I: Electrostatic Disruptors (Top-Left)**
     * *Examples:* R248Q, R273H, R280K.
     * *Mechanism:* Loss of the positive "electrostatic clamp."
-    * *Detection:* Invisible to FoldX, but flagged as high-energy defects (>20 kcal/mol) by my C-engine.
+    * *Detection:* Invisible to FoldX, but flagged as high-energy defects (>12 kcal/mol) by my C-engine.
 
 2.  **Type II: Structural Destabilizers (Bottom-Right)**
     * *Examples:* R175H, C176F (Zinc-binding loss).
